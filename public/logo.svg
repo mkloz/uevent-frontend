@@ -1,0 +1,20 @@
+<svg
+  width="128px"
+  height="128px"
+  viewBox="0 0 60 60"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M30 8C19.5066 8 11 16.5066 11 27C11 32.5599 13.3018 37.5783 17 41.0888L30 54L43 41.0888C46.6982 37.5783 49 32.5599 49 27C49 16.5066 40.4934 8 30 8Z"
+    fill="#4F46E5"
+  />
+  
+  <!-- Inner Circle -->
+  <circle cx="30" cy="27" r="10" fill="white" stroke="#4F46E5" strokeWidth="2" />
+  
+  <!-- Event Elements -->
+  <rect x="25" y="22" width="10" height="2" rx="1" fill="#4F46E5" />
+  <rect x="25" y="26" width="10" height="2" rx="1" fill="#4F46E5" />
+  <rect x="25" y="30" width="6" height="2" rx="1" fill="#4F46E5" />
+</svg>
