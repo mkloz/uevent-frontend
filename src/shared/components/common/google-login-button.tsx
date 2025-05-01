@@ -58,7 +58,7 @@ const GoogleSignIn: FC<GoogleSignInProps> = ({ label, className }) => {
 
 export const GoogleSignInButton: FC<GoogleSignInProps> = (props) => {
   return (
-    <GoogleOAuthProvider clientId={config.googleClientId}>
+    <GoogleOAuthProvider clientId={config.googleClientId || ''}>
       <GoogleSignIn {...props} />
     </GoogleOAuthProvider>
   );

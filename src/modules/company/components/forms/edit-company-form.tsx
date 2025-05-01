@@ -97,7 +97,8 @@ export const EditCompanyForm: FC<Props> = ({ company, onSuccess }) => {
     }
   });
 
-  const handleAddressChange = (address: LocationDto) => {
+  const handleAddressChange = (address: LocationDto | null) => {
+    if (!address) return;
     setValue('location.address', address.address, { shouldValidate: true, shouldDirty: true });
     setValue('location.lat', address.lat, { shouldValidate: true, shouldDirty: true });
     setValue('location.lng', address.lng, { shouldValidate: true, shouldDirty: true });

@@ -12,7 +12,7 @@ const libraries: Library[] = ['places', 'geometry', 'places'];
 export const useGoogleMaps = () => {
   const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: config.googleMapsApiKey,
+    googleMapsApiKey: config.googleMapsApiKey || '',
     libraries
   });
 

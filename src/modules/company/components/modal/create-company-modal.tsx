@@ -312,6 +312,7 @@ export const CreateCompanyModal: FC<Props> = ({ open, userId, setOpen }) => {
                   <AddressAutocomplete
                     placeholder="Enter company address"
                     onAddressSelect={(address) => {
+                      if (!address) return;
                       setValue('location', address, {
                         shouldValidate: true,
                         shouldDirty: true
