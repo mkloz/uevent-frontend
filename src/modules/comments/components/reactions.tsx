@@ -34,7 +34,7 @@ export const Reactions: FC<ReactionListProps> = ({ small, commentId, newsId }) =
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [QueryKeys.REACTIONS, relationId] });
-      queryClient.invalidateQueries({ queryKey: [QueryKeys.MY_REACTIONS] });
+      queryClient.invalidateQueries({ queryKey: [QueryKeys.USERS_ME, QueryKeys.MY_REACTIONS] });
     }
   });
 
@@ -48,7 +48,7 @@ export const Reactions: FC<ReactionListProps> = ({ small, commentId, newsId }) =
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [QueryKeys.REACTIONS, relationId] });
-      queryClient.invalidateQueries({ queryKey: [QueryKeys.MY_REACTIONS] });
+      queryClient.invalidateQueries({ queryKey: [QueryKeys.USERS_ME, QueryKeys.MY_REACTIONS] });
     }
   });
 

@@ -13,7 +13,7 @@ export const useEventUnfollowMutation = () => {
         queryKey: [QueryKeys.EVENT_SUBSCRIBERS, eventId]
       });
       queryClient.invalidateQueries({
-        queryKey: [QueryKeys.EVENT_SUBSCRIBERS, 'my']
+        queryKey: [QueryKeys.USERS_ME, 'my', 'followed', 'events']
       });
     }
   });

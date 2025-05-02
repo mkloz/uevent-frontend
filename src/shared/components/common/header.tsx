@@ -81,7 +81,6 @@ export const Header: React.FC = () => {
             </Button>
             {user.data ? (
               <>
-                <UserMenuSheet />
                 <Button
                   variant="ghost"
                   size="icon"
@@ -93,6 +92,7 @@ export const Header: React.FC = () => {
                     <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full animate-ping"></span>
                   )}
                 </Button>
+                <UserMenuSheet />
               </>
             ) : (
               <NavLink

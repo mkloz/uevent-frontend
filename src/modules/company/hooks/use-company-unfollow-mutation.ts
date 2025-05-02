@@ -13,7 +13,7 @@ export const useCompanyUnfollowMutation = () => {
         queryKey: [QueryKeys.COMPANY_SUBSCRIBERS, companyId]
       });
       queryClient.invalidateQueries({
-        queryKey: [QueryKeys.COMPANY_SUBSCRIBERS, 'my']
+        queryKey: [QueryKeys.USERS_ME, 'my', 'followed', 'companies']
       });
     }
   });

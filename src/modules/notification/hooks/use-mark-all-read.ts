@@ -11,7 +11,10 @@ export function useMarkAllRead() {
   const mutation = useMutation({
     mutationFn: async () => {
       // Get all unread notifications
-      const data = queryClient.getQueryData<InfiniteData<Paginated<Notification>>>([QueryKeys.NOTIFICATIONS]);
+      const data = queryClient.getQueryData<InfiniteData<Paginated<Notification>>>([
+        QueryKeys.USERS_ME,
+        QueryKeys.NOTIFICATIONS
+      ]);
       if (!data) return;
 
       const unreadNotifications = data.pages
@@ -27,7 +30,7 @@ export function useMarkAllRead() {
     },
 
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: [QueryKeys.NOTIFICATIONS] });
+      queryClient.invalidateQueries({ queryKey: [QueryKeys.USERS_ME, QueryKeys.NOTIFICATIONS] });
     }
   });
 
