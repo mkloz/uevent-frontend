@@ -72,8 +72,16 @@ export const Header: React.FC = () => {
               <FiSearch className="text-xl stroke-3" />
             </Button>
 
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden">
+              {isMobileMenuOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
+            </Button>
             {user.data ? (
               <>
+                <UserMenuSheet />
                 <Button
                   variant="ghost"
                   size="icon"
@@ -85,15 +93,6 @@ export const Header: React.FC = () => {
                     <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full animate-ping"></span>
                   )}
                 </Button>
-
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="md:hidden">
-                  {isMobileMenuOpen ? <FiX className="text-xl" /> : <FiMenu className="text-xl" />}
-                </Button>
-                <UserMenuSheet />
               </>
             ) : (
               <NavLink
